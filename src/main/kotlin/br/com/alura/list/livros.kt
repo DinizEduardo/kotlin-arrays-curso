@@ -26,4 +26,4 @@ val livro4 = Livro(
     editora = "Editora B"
 )
 
-val livros: MutableList<Livro?> = mutableListOf(livro1, null, livro2, livro3, livro4, null)
+val livros: MutableList<Livro> = mutableListOf(livro1, livro2, livro3, livro4)
