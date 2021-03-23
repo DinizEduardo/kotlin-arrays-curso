@@ -38,10 +38,19 @@ fun main() {
         )
     )
 
-    println(livros)
+    livros.imprimeComMarcadores()
 
     livros.remove(livro1)
 
-    println(livros)
+    livros.imprimeComMarcadores()
+
+}
+
+fun MutableList<Livro>.imprimeComMarcadores() {
+    val joinToString = this.joinToString(separator = "\n") {
+        "- ${it.titulo} de ${it.autor}"
+    }
+
+    println(" ### LISTA DE LIVROS ###\n$joinToString")
 
 }
