@@ -62,11 +62,3 @@ fun main() {
     println(titulos)
 }
 
-fun List<Livro>.imprimeComMarcadores() {
-    val joinToString = this.joinToString(separator = "\n") {
-        "- ${it.titulo} de ${it.autor}"
-    }
-
-    println(" ### LISTA DE LIVROS ###\n$joinToString")
-
-}
