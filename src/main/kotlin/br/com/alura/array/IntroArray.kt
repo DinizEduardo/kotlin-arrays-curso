@@ -1,23 +1,22 @@
 package br.com.alura.array
 
 fun main() {
-    val idade1 = 25
-    val idade2 = 19
-    val idade3 = 33
+    val idades: IntArray = intArrayOf(25, 19, 33, 20, 55)
 
-    val maiorIdade = if (idade1 > idade2 && idade1 > idade3) {
-        idade1
-    } else if (idade2 > idade3) {
-        idade2
-    } else {
-        idade3
+    var maiorIdade = 0
+    for (idade in idades) {
+        if (idade > maiorIdade)
+            maiorIdade = idade
     }
 
-    println(maiorIdade)
+    println("A maior idade eh: $maiorIdade")
 
-    val idades = IntArray(4)
-    idades[0] = 25
-    idades[1] = 19
-    idades[2] = 33
-    idades[3] = 20
+    var menorIdade = Int.MAX_VALUE
+    idades.forEach { idade ->
+        if (idade < menorIdade)
+            menorIdade = idade
+    }
+
+    println("A menor idade eh: $menorIdade")
+
 }
